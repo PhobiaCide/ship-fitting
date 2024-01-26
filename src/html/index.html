@@ -1,0 +1,732 @@
+<!doctype html>
+<html
+  lang="en-us"
+  data-bs-core="modern"
+  data-bs-theme="dark"
+>
+
+  <head>
+    <title>Eve Online Ship Fitting</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <base
+      href="../"
+      target="_blank"
+    />
+    <!-- Stylesheets -->
+    <div id="stylesheets">
+      <!-- Normalize.css -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+      />
+      <!-- Halfmoon.css -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Halfmoon/2.0.1/css/halfmoon.min.css"
+      />
+      <!-- Halfmoon Modern Core -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/halfmoon@2.0.1/css/cores/halfmoon.modern.css"
+        rel="stylesheet"
+      />
+      <!-- Custom CSS -->
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="./css/style.css"
+      />
+    </div>
+  </head>
+
+  <body class="container-fluid bg-body subpixel-antialiased">
+    <header class="jumbotron jumbotron-fluid">
+      <h1 class="text-center w-md-75 text-body border-bottom mx-auto pb-2">Eve Online Ship Fitting Display</h1>
+      <nav class="btn-group text-center row-col d-block">
+        <input
+          type="button"
+          class="btn btn-outline-primary position-relative"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#import-panel"
+          value="Import"
+        />
+        <input
+          type="button"
+          class="btn btn-outline-primary position-relative"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#items-panel"
+          value="Items"
+        />
+        <input
+          type="button"
+          class="btn btn-outline-primary position-relative"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#cargo-panel"
+          value="Cargo"
+        />
+        <input
+          type="button"
+          class="btn btn-outline-primary position-relative"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#stats-panel"
+          value="Stats"
+        />
+      </nav>
+    </header>
+    <main>
+      <!-- Ship Fitting Display -->
+      <article
+        id="fit"
+        class="mt-5 d-block"
+      >
+        <img
+          src="./images/fittingbase.png"
+          id="fit-mask"
+          class="img img-rounded rounded-circle opacity-75"
+        />
+
+        <img
+          id="ship-image"
+          class="ship-image img-rounded rounded-circle opacity-75"
+          src="https://images.evetech.net/types/19724/render?size=1024"
+        />
+
+        <article
+          id="slots"
+          class="slots"
+          aria-label="Ship Module Slots"
+        >
+          <section
+            class="high-slots"
+            aria-label="Ship High Slots"
+          >
+            <span
+              class="slot high-slot high-slot-1 slot-1"
+              aria-label="High Slot 01"
+            >
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/40661/icon?size=64"
+                  data-tooltip="true"
+                  title="Capital Infectious Scoped Energy Neutralizer"
+                  data-bs-original-title="Capital Infectious Scoped Energy Neutralizer"
+                  aria-label="Capital Infectious Scoped Energy Neutralizer"
+                />
+              </a>
+            </span>
+            <span class="slot high-slot high-slot-2 slot-2">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/4292/icon?size=64"
+                  data-tooltip="true"
+                  title="Siege Module II"
+                  data-bs-original-title="Siege Module II"
+                  aria-label="Siege Module II"
+                />
+              </a>
+            </span>
+            <span class="slot high-slot high-slot-3 slot-3">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/20450/icon?size=64"
+                  data-tooltip="true"
+                  title="Ion Siege Blaster I"
+                  data-bs-original-title="Ion Siege Blaster I"
+                  aria-label="Ion Siege Blaster I"
+                />
+              </a>
+            </span>
+            <span class="slot high-slot high-slot-4 slot-4">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/20450/icon?size=64"
+                  data-tooltip="true"
+                  title="Ion Siege Blaster I"
+                  data-bs-original-title="Ion Siege Blaster I"
+                  aria-label="Ion Siege Blaster I"
+                />
+              </a>
+            </span>
+            <span class="slot high-slot high-slot-5 slot-5">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/20450/icon?size=64"
+                  data-tooltip="true"
+                  title="Ion Siege Blaster I"
+                  data-bs-original-title="Ion Siege Blaster I"
+                  aria-label="Ion Siege Blaster I"
+                />
+              </a>
+            </span>
+            <span class="slot high-slot high-slot-6 slot-6">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="./images/high.png"
+                  data-tooltip="true"
+                  title="high-slot-6"
+                  data-bs-original-title="Empty High Slot"
+                  aria-label="Empty High Slot"
+                />
+              </a>
+            </span>
+            <span class="slot high-slot high-slot-7">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="./images/high.png"
+                  data-tooltip="true"
+                  title="high-slot-7"
+                  data-bs-original-title="Empty High Slot"
+                  aria-label="Empty High Slot"
+                />
+              </a>
+            </span>
+            <span class="slot high-slot high-slot-8">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="./images/high.png"
+                  data-tooltip="true"
+                  title="high-slot-8"
+                  data-bs-original-title="Empty High Slot"
+                  aria-label="Empty High Slot"
+                />
+              </a>
+            </span>
+          </section>
+          <section class="mid-slots">
+            <span class="slot mid-slot mid-slot-1">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/40734/icon?size=64"
+                  data-tooltip="true"
+                  title="Heavy Warp Disruptor II"
+                  data-bs-original-title="Heavy Warp Disruptor II"
+                  aria-label="Heavy Warp Disruptor II"
+                />
+              </a>
+            </span>
+            <span class="slot mid-slot mid-slot-2">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/1978/icon?size=64"
+                  data-tooltip="true"
+                  title="Tracking Computer II"
+                  data-bs-original-title="Tracking Computer II"
+                  aria-label="Tracking Computer II"
+                />
+              </a>
+            </span>
+            <span class="slot mid-slot mid-slot-3">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/1978/icon?size=64"
+                  data-tooltip="true"
+                  title="Tracking Computer II"
+                  data-bs-original-title="Tracking Computer II"
+                  aria-label="Tracking Computer II"
+                />
+              </a>
+            </span>
+            <span class="slot mid-slot mid-slot-4">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/3578/icon?size=64"
+                  data-tooltip="true"
+                  title="Heavy Capacitor Booster II"
+                  data-bs-original-title="Heavy Capacitor Booster II"
+                  aria-label="Heavy Capacitor Booster II"
+                />
+              </a>
+            </span>
+            <span class="slot mid-slot mid-slot-5">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/3578/icon?size=64"
+                  data-tooltip="true"
+                  title="Heavy Capacitor Booster II"
+                  data-bs-original-title="Heavy Capacitor Booster II"
+                  aria-label="Heavy Capacitor Booster II"
+                />
+              </a>
+            </span>
+            <span class="slot mid-slot mid-slot-6">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/1978/icon?size=64"
+                  data-tooltip="true"
+                  title="Tracking Computer II"
+                  data-bs-original-title="Tracking Computer II"
+                  aria-label="Tracking Computer II"
+                />
+              </a>
+            </span>
+            <span class="slot mid-slot mid-slot-7">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/3578/icon?size=64"
+                  data-tooltip="true"
+                  title="Heavy Capacitor Booster II"
+                  data-bs-original-title="Heavy Capacitor Booster II"
+                  aria-label="Heavy Capacitor Booster II"
+                />
+              </a>
+            </span>
+            <span class="slot mid-slot mid-slot-8">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/3578/icon?size=64"
+                  data-tooltip="true"
+                  title="Heavy Capacitor Booster II"
+                  data-bs-original-title="Heavy Capacitor Booster II"
+                  aria-label="Heavy Capacitor Booster II"
+                />
+              </a>
+            </span>
+          </section>
+          <section class="low-slots">
+            <span class="slot low-slot low-slot-1">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/40351/icon?size=64"
+                  data-tooltip="true"
+                  title="25000mm Steel Plates II"
+                  data-bs-original-title="25000mm Steel Plates II"
+                  aria-label="25000mm Steel Plates II"
+                />
+              </a>
+            </span>
+            <span class="slot low-slot low-slot-2">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/40351/icon?size=64"
+                  data-tooltip="true"
+                  title=""
+                  data-bs-original-title="25000mm Steel Plates II"
+                  aria-label="25000mm Steel Plates II"
+                />
+              </a>
+            </span>
+            <span class="slot low-slot low-slot-3">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/40351/icon?size=64"
+                  data-tooltip="true"
+                  title=""
+                  data-bs-original-title="25000mm Steel Plates II"
+                  aria-label="25000mm Steel Plates II"
+                />
+              </a>
+            </span>
+            <span class="slot low-slot low-slot-4">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/18789/icon?size=64"
+                  data-tooltip="true"
+                  title=""
+                  data-bs-original-title="Coreli A-Type Multispectrum Coating"
+                  aria-label="Coreli A-Type Multispectrum Coating"
+                />
+              </a>
+            </span>
+            <span class="slot low-slot low-slot-5">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/2048/icon?size=64"
+                  data-tooltip="true"
+                  title=""
+                  data-bs-original-title="Damage Control II"
+                  aria-label="Damage Control II"
+                />
+              </a>
+            </span>
+            <span class="slot low-slot low-slot-6">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/10190/icon?size=64"
+                  data-tooltip="true"
+                  title="Magnetic Field Stabilizer II"
+                  data-bs-original-title="Magnetic Field Stabilizer II"
+                  aria-label="Magnetic Field Stabilizer II"
+                />
+              </a>
+            </span>
+            <span class="slot low-slot low-slot-7">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/10190/icon?size=64"
+                  data-tooltip="true"
+                  title="Magnetic Field Stabilizer II"
+                  data-bs-original-title="Magnetic Field Stabilizer II"
+                  aria-label="Magnetic Field Stabilizer II"
+                />
+              </a>
+            </span>
+            <span class="slot low-slot low-slot-8">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/10190/icon?size=64"
+                  data-tooltip="true"
+                  title="Magnetic Field Stabilizer II"
+                  data-bs-original-title="Magnetic Field Stabilizer II"
+                  aria-label="Magnetic Field Stabilizer II"
+                />
+              </a>
+            </span>
+          </section>
+          <section class="rig-slots">
+            <span class="slot rig-slot rig-slot-1">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/30993/icon?size=64"
+                  data-tooltip="true"
+                  title="Capital Trimark Armor Pump I"
+                  data-bs-original-title="Capital Trimark Armor Pump I"
+                  aria-label="Capital Trimark Armor Pump I"
+                />
+              </a>
+            </span>
+            <span class="slot rig-slot rig-slot-2">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/30993/icon?size=64"
+                  data-tooltip="true"
+                  title="Capital Trimark Armor Pump I"
+                  data-bs-original-title="Capital Trimark Armor Pump I"
+                  aria-label="Capital Trimark Armor Pump I"
+                />
+              </a>
+            </span>
+            <span class="slot rig-slot rig-slot-3">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="https://images.evetech.net/types/30993/icon?size=64"
+                  data-tooltip="true"
+                  title="Capital Trimark Armor Pump I"
+                  data-bs-original-title="Capital Trimark Armor Pump I"
+                  aria-label="Capital Trimark Armor Pump I"
+                />
+              </a>
+            </span>
+          </section>
+          <section class="sub-system-slots">
+            <span class="slot sub-system-slot sub-system-slot-1">
+              <a
+                class="slot-item"
+                href=""
+              >
+                <img
+                  src="#"
+                  data-tooltip="true"
+                  title="Capital Trimark Armor Pump I"
+                  data-bs-original-title="Capital Trimark Armor Pump I"
+                  aria-label="Capital Trimark Armor Pump I"
+                />
+              </a>
+              </span>
+              <span class="slot sub-system-slot sub-system-slot-2">
+                <a
+                  class="slot-item"
+                  href=""
+                >
+                  <img
+                    src="https://images.evetech.net/types/30993/icon?size=64"
+                    data-tooltip="true"
+                    title="Capital Trimark Armor Pump I"
+                    data-bs-original-title="Capital Trimark Armor Pump I"
+                    aria-label="Capital Trimark Armor Pump I"
+                  />
+                </a>
+                </span>
+                <span class="slot sub-system-slot sub-system-slot-3">
+                  <a
+                    class="slot-item"
+                    href=""
+                  >
+                    <img
+                      src="https://images.evetech.net/types/30993/icon?size=64"
+                      data-tooltip="true"
+                      title="Capital Trimark Armor Pump I"
+                      data-bs-original-title="Capital Trimark Armor Pump I"
+                      aria-label="Capital Trimark Armor Pump I"
+                    />
+                  </a>
+                </span>
+                <span class="slot sub-system-slot sub-system-slot-3">
+                  <a
+                    class="slot-item"
+                    href=""
+                  >
+                    <img
+                      src="https://images.evetech.net/types/30993/icon?size=64"
+                      data-tooltip="true"
+                      title="Capital Trimark Armor Pump I"
+                      data-bs-original-title="Capital Trimark Armor Pump I"
+                      aria-label="Capital Trimark Armor Pump I"
+                    />
+                  </a>
+                </span>
+          </section>
+        </article>
+      </article>
+      <div id="side-panels">
+        <!-- Items Side-panel -->
+        <aside
+          id="items-panel"
+          data-bs-scroll="true"
+          data-bs-backdrop="false"
+          tabindex="-1"
+          aria-labelledby="items-panel-title"
+          class="offcanvas offcanvas-start card bg-primary rounded-start-0 border-end shadow w-sm-75 w-md-50 w-xl-75 w my-5 pe-1"
+        >
+          <header class="bg-body rounded-end rounded-bottom-0 border border-bottom-0 border-start-0 text-center">
+            <h2 id="items-panel-title card-title">Items Panel</h2>
+          </header>
+          <article
+            class="w-100 h-100 bg-body-secondary bg-opacity-75 rounded-bottom rounded-start-0 rounded-top-0 border border-top-0 border-start-0"
+          >
+            <section class="h-100 bg-body-tertiary rounded border border-start-0 rounded-start-0 rounded-top-0 p-0">
+              <form class="p-4">
+                <fieldset class="form-group">
+                  <legend
+                    class="form-group-text"
+                    alt="Agency 'Pyrolancea' DB7 Dose III x 5"
+                    data-tooltip="true"
+                    title="Select a category to enable the item group selection."
+                  >Item Lookup</legend>
+
+                  <span class="input-group">
+                    <label
+                      for="item-category-select"
+                      class="input-group-text"
+                      alt="Agency 'Pyrolancea' DB7 Dose III x 5"
+                      data-tooltip="true"
+                      title="Select a category to enable the item group selection."
+                    >Item Category:</label>
+                    <select
+                      id="item-category-select"
+                      class="form-control"
+                    >
+                      <option value="">Select Item Category</option>
+                      <option value="ammo">Ammo</option>
+                      <option value="drone">Drone</option>
+                      <option value="module">Module</option>
+                      <option value="ship">Ship</option>
+
+                    </select>
+                  </span>
+
+                  <span class="input-group">
+                    <label
+                      for="item-group-select"
+                      class="input-group-text"
+                    >Item Group:</label>
+                    <select
+                      id="item-group-select"
+                      class="form-control"
+                      disabled
+                    >
+                      <option value="">Select Item Group</option>
+                      <option value="ammo">Ammo</option>
+                      <option value="drone">Drone</option>
+                      <option value="module">Module</option>
+                      <option value="ship">Ship</option>
+
+                    </select>
+                  </span>
+
+                  <span class="input-group">
+                    <label
+                      for="item-type-input"
+                      class="input-group-text"
+                    >Item Type:</label>
+                    <input
+                      id="item-type-input"
+                      type="text"
+                      class="form-control"
+                      placeholder="Item Type"
+                    >
+
+                  </span>
+                </fieldset>
+              </form>
+            </section>
+          </article>
+        </aside>
+        <!-- Cargo Side-panel -->
+        <aside
+          id="cargo-panel"
+          data-bs-scroll="true"
+          data-bs-backdrop="false"
+          tabindex="-1"
+          aria-labelledby="cargo-panel-title"
+          class="offcanvas offcanvas-bottom card bg-primary rounded-0 rounded-top-5 border-top shadow h-50 pt-4 pb-0 ps-1 pe-0 ms-2"
+        >
+          <h2 id="cargo-panel-title card-title">Cargo Panel</h2>
+          <article class="d-block">
+            <header class="card-header input-group">
+              <img
+                src="https://www.eveworkbench.com/images/icons/items.png"
+                width="32"
+              />
+              <h2 class="card-title">Cargo:</h2>
+            </header>
+            <section class="card-body">
+              <img
+                src="https://images.evetech.net/types/20929/icon?size=32"
+                data-tooltip="true"
+                title="Shadow Antimatter Charge XL"
+                data-bs-original-title="Shadow Antimatter Charge XL"
+                aria-label="Shadow Antimatter Charge XL"
+              />
+              <span
+                class="text-info"
+                style="
+                position: relative;
+                bottom: 18px;
+                left: 24px;
+                cursor: default;
+                text-wrap: nowrap;
+              "
+              >
+                x3000
+              </span>
+              <img
+                src="https://images.evetech.net/types/29001/icon?size=32"
+                data-tooltip="true"
+                title="Tracking Speed Script"
+                data-bs-original-title="Tracking Speed Script"
+                aria-label="Tracking Speed Script"
+              />
+              <span class="text-info">
+                x3
+              </span>
+              <img
+                src="https://images.evetech.net/types/29001/icon?size=32"
+                alt="Agency 'Pyrolancea' DB7 Dose III x 5"
+                data-tooltip="true"
+                title=""
+                data-bs-original-title="Agency 'Pyrolancea' DB7 Dose III x 5"
+                aria-label="Agency 'Pyrolancea' DB7 Dose III x 5"
+              />
+              <img
+                src="https://images.evetech.net/types/29001/icon?size=32"
+                data-tooltip="true"
+                title=""
+                data-bs-original-title="Agency 'Pyrolancea' DB9 Dose IV x 4"
+                aria-label="Agency 'Pyrolancea' DB9 Dose IV x 4"
+              />
+
+            </section>
+          </article>
+        </aside>
+        <!-- Stats Side-panel -->
+        <aside
+          id="stats-panel"
+          data-bs-scroll="true"
+          data-bs-backdrop="false"
+          tabindex="-1"
+          aria-labelledby="stats-panel-title"
+          class="offcanvas offcanvas-end card bg-primary rounded-0 rounded-top-5 border-top shadow w-25 pt-4 pb-0 ps-1 pe-0 ms-2"
+        >
+          <h2 id="stats-panel-title card-title">Stats Panel</h2>
+        </aside>
+      </div>
+    </main>
+    <div id="scripts">
+      <!-- Popper.js -->
+      <script
+        fetchpriority="low"
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      ></script>
+      <!-- Bootstrap.js -->
+      <script
+        fetchpriority="auto"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      ></script>
+    </div>
+  </body>
+
+</html>

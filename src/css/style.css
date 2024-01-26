@@ -1,0 +1,496 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+body {
+  zoom: 1;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  max-height: 100vh;
+}
+
+#fit {
+  position: relative;
+  height: 512px;
+  margin: auto;
+}
+
+#fit-mask {
+  z-index: 1;
+  transform: scale(1.2);
+  border-radius: 50% !important;
+  outline-width: 12px;
+  outline-offset: -35px;
+  outline-style: solid;
+  color: var(--bs-);
+  border-style: none;
+}
+#fitting-base {
+  background-image: url("./images/fittingbase.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 512px;
+  height: 512px;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.01);
+  word-wrap: initial;
+  max-height: 512px;
+  zoom: 1;
+}
+
+#fit-mask,
+#ship-image {
+  position: absolute;
+  top: calc(50% - (512px / 2));
+  left: calc(50% - (512px / 2));
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 1);
+  word-wrap: initial;
+  max-height: 512px;
+  vertical-align: middle;
+  zoom: 1;
+}
+
+#ship-image {
+  zoom: 1;
+}
+
+.slots {
+  z-index: 2;
+}
+
+@media screen and (max-width : 600px) {
+	body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+	}
+
+	#ship-image {
+		outline-width: 12px;
+    outline-offset: -35px;
+    outline-style: solid;
+    outline-color: var(--bg-body); 
+	}
+
+}
+
+.slot {
+  background-image: url("../images/slot.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  width: 64px;
+  height: 64px;
+  z-index: 10;
+}
+
+.slot a {
+  display: block;
+  z-index: 10;
+}
+
+.slot-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.high-slots,
+.mid-slots,
+.low-slots,
+.rig-slots,
+.sub-system-slots {
+  z-index: 10;
+  position: relative;
+  left: calc(50% - (512px / 2));
+  top: calc(50% - (512px / 2));
+}
+
+.high-slots .high-slot,
+.mid-slots .mid-slot,
+.low-slots .low-slot,
+.rig-slots .rig-slot,
+.sub-system-slots .sub-system-slot{
+  position: absolute;
+}
+
+.high-slots .high-slot-1 {
+  top: 35px;
+  left: 87px;
+  transform: rotate(-36deg) scale(1);
+}
+
+.high-slots .high-slot-1 .slot-item {
+  transform: rotate(37deg) scale(0.6);
+}
+
+.high-slots .high-slot-2 {
+  top: 13px;
+  left: 124px;
+  transform: rotate(-26deg) ;
+}
+
+.high-slots .high-slot-2 .slot-item {
+  transform: rotate(25deg) scale(0.6);
+}
+
+.high-slots .high-slot-3 {
+  top: -2px;
+  left: 164px;
+  transform: rotate(-14deg) ;
+}
+
+.high-slots .high-slot-3 .slot-item {
+  transform: rotate(14deg) scale(0.6);
+}
+
+.high-slots .high-slot-4 {
+  top: -9px;
+  left: 207px;
+  transform: rotate(-4deg) ;
+}
+
+.high-slots .high-slot-4 .slot-item {
+  transform: rotate(4deg) scale(0.6);
+}
+
+.high-slots .high-slot-5 {
+  top: -8px;
+  left: 251px;
+  transform: rotate(7deg) ;
+}
+
+.high-slots .high-slot-5 .slot-item {
+  transform: rotate(-7deg) scale(0.6);
+}
+
+.high-slots .high-slot-6 {
+  top: 1px;
+  left: 294px;
+  transform: rotate(17deg) ;
+}
+
+.high-slots .high-slot-6 .slot-item {
+  transform: rotate(-17deg) scale(0.6);
+}
+
+.high-slots .high-slot-7 {
+  top: 18px;
+  left: 334px;
+  transform: rotate(28deg) ;
+}
+
+.high-slots .high-slot-7 .slot-item {
+  transform: rotate(-27deg) scale(0.6);
+}
+
+.high-slots .high-slot-8 {
+  top: 41px;
+  left: 370px;
+  transform: rotate(38deg) ;
+}
+
+.high-slots .high-slot-8 .slot-item {
+  transform: rotate(-38deg) scale(0.6);
+}
+
+.mid-slots .mid-slot-1 {
+  top: 80px;
+  left: 408px;
+  transform: rotate(53deg) ;
+}
+
+.mid-slots .mid-slot-1 .slot-item {
+  transform: rotate(-53deg) scale(0.6);
+}
+
+.mid-slots .mid-slot-2 {
+  top: 118px;
+  left: 432px;
+  transform: rotate(63deg) ;
+}
+
+.mid-slots .mid-slot-2 .slot-item {
+  transform: rotate(-63deg) scale(0.6);
+}
+
+.mid-slots .mid-slot-3 {
+  top: 160px;
+  left: 449px;
+  transform: rotate(73deg) ;
+}
+
+.mid-slots .mid-slot-3 .slot-item {
+  transform: rotate(-73deg) scale(0.6);
+}
+
+.mid-slots .mid-slot-4 {
+  top: 204px;
+  left: 457px;
+  transform: rotate(86deg) ;
+}
+
+.mid-slots .mid-slot-4 .slot-item {
+  transform: rotate(-86deg) scale(0.6);
+}
+
+.mid-slots .mid-slot-5 {
+  top: 248px;
+  left: 456px;
+  transform: rotate(96deg) ;
+}
+
+.mid-slots .mid-slot-5 .slot-item {
+  transform: rotate(-96deg) scale(0.6);
+}
+
+.mid-slots .mid-slot-6 {
+  top: 291px;
+  left: 448px;
+  transform: rotate(106deg) ;
+}
+
+.mid-slots .mid-slot-6 .slot-item {
+  transform: rotate(-106deg) scale(0.6);
+}
+
+.mid-slots .mid-slot-7 {
+  top: 332px;
+  left: 431px;
+  transform: rotate(118deg) ;
+}
+
+.mid-slots .mid-slot-7 .slot-item {
+  transform: rotate(-118deg) scale(0.6);
+}
+
+.mid-slots .mid-slot-8 {
+  top: 369px;
+  left: 407px;
+  transform: rotate(129deg) ;
+}
+
+.mid-slots .mid-slot-8 .slot-item {
+  transform: rotate(-129deg) scale(0.6);
+}
+
+.low-slots .low-slot-1 {
+  top: 407px;
+  left: 368px;
+  transform: rotate(141deg) ;
+}
+
+.low-slots .low-slot-1 .slot-item {
+  transform: rotate(-141deg) scale(0.6);
+}
+
+.low-slots .low-slot-2 {
+  top: 431px;
+  left: 332px;
+  transform: rotate(152deg) ;
+}
+
+.low-slots .low-slot-2 .slot-item {
+  transform: rotate(-152deg) scale(0.6);
+}
+
+.low-slots .low-slot-3 {
+  top: 448px;
+  left: 292px;
+  transform: rotate(163deg) ;
+}
+
+.low-slots .low-slot-3 .slot-item {
+  transform: rotate(-163deg) scale(0.6);
+}
+
+.low-slots .low-slot-4 {
+  top: 457px;
+  left: 249px;
+  transform: rotate(174deg) ;
+}
+
+.low-slots .low-slot-4 .slot-item {
+  transform: rotate(-174deg) scale(0.6);
+}
+
+.low-slots .low-slot-5 {
+  top: 457px;
+  left: 204px;
+  transform: rotate(186deg) ;
+}
+
+.low-slots .low-slot-5 .slot-item {
+  transform: rotate(-186deg) scale(0.6);
+}
+
+.low-slots .low-slot-6 {
+  top: 449px;
+  left: 160px;
+  transform: rotate(196deg) ;
+}
+
+.low-slots .low-slot-6 .slot-item {
+  transform: rotate(-196deg) scale(0.6);
+}
+
+.low-slots .low-slot-7 {
+  top: 432px;
+  left: 118px;
+  transform: rotate(207deg) ;
+}
+
+.low-slots .low-slot-7 .slot-item {
+  transform: rotate(-207deg) scale(0.6);
+}
+
+.low-slots .low-slot-8 {
+  top: 409px;
+  left: 80px;
+  transform: rotate(216deg) ;
+}
+
+.low-slots .low-slot-8 .slot-item {
+  transform: rotate(-216deg) scale(0.6);
+}
+
+.rig-slots {
+  z-index: 2;
+  position: absolute;
+  top: calc(50% - (512px / 2));
+  left: calc(50% - (512px / 2));
+}
+
+.rig-slots .rig-slot {
+  position: absolute;
+}
+
+.rig-slots .rig-slot-1 {
+  top: 100px;
+  left: 70px;
+  transform: rotate(-50deg) ;
+}
+
+.rig-slots .rig-slot-1 .slot-item {
+  transform: rotate(50deg) scale(0.6);
+}
+
+.rig-slots .rig-slot-2 {
+  top: 141px;
+  left: 60px;
+  transform: rotate(-60deg) ;
+}
+
+.rig-slots .rig-slot-2 .slot-item {
+  transform: rotate(60deg) scale(0.6);
+}
+
+.rig-slots .rig-slot-3 {
+  top: 173px;
+  left: 46px;
+  transform: rotate(-73deg) ;
+}
+
+.rig-slots .rig-slot-3 .slot-item {
+  transform: rotate(73deg) scale(0.6);
+}
+
+.sub-system-slots {
+  z-index: 2;
+  position: absolute;
+  top: calc(50% - (512px / 2));
+  left: calc(50% - (512px / 2));
+}
+
+.sub-system-slots .sub-system-slot {
+  position: absolute;
+}
+
+.sub-system-slots .sub-system-slot-1 {
+  top: 221px;
+  left: 39px;
+  transform: rotate(-87deg) ;
+}
+
+.sub-system-slots .sub-system-slot-1 .slot-item {
+  transform: rotate(87deg) scale(0.6);
+}
+
+.sub-system-slots .sub-system-slot-2 {
+  top: 255px;
+  left: 40px;
+  transform: rotate(-97deg) ;
+}
+
+.sub-system-slots .sub-system-slot-2 .slot-item {
+  transform: rotate(97deg) scale(0.6);
+}
+
+.sub-system-slots .sub-system-slot-3 {
+  top: 287px;
+  left: 47px;
+  transform: rotate(-109deg) ;
+}
+
+.sub-system-slots .sub-system-slot-3 .slot-item {
+  transform: rotate(109deg) scale(0.6);
+}
+
+.sub-system-slots .sub-system-slot-4 {
+  top: 317px;
+  left: 60px;
+  transform: rotate(-118deg) ;
+}
+
+.sub-system-slots .sub-system-slot-4 .slot-item {
+  transform: rotate(118deg) scale(0.6);
+}
+
+.sub-system-slots .sub-system-slot-5 {
+  top: 346px;
+  left: 78px;
+  transform: rotate(-128deg) ;
+}
+
+.sub-system-slots .sub-system-slot-5 .slot-item {
+  transform: rotate(128deg) scale(0.6);
+}
+
+.slot-item {
+  transform: scale(0.5);
+}
+
+.slot-item:hover {
+  transform: scale(.2);
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5vw;
+  }
+
+  h2 {
+    font-size: 2vw;
+  }
+
+  h3 {
+    font-size: 1.75vw;
+  }
+
+  h4 {
+    font-size: 1.5vw;
+  }
+}
