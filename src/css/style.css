@@ -35,7 +35,7 @@ body {
   border-style: none;
 }
 #fitting-base {
-  background-image: url("./images/fittingbase.png");
+  background-image: url("./src/images/fittingbase.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 512px;
