@@ -65,7 +65,9 @@ body {
 }
 
 #ship-image {
-  zoom: 1;
+  zoom: 0.85;
+  filter: saturate(3) hue-rotate(200deg) opacity(0.5) brightness(3);
+background-blend-mode:screen;
 }
 
 .slots {
@@ -379,8 +381,8 @@ body {
 }
 
 .rig-slots .rig-slot-1 {
-  top: 100px;
-  left: 70px;
+  top: 75px;
+  left: 45px;
   transform: rotate(-50deg) ;
 }
 
@@ -389,23 +391,23 @@ body {
 }
 
 .rig-slots .rig-slot-2 {
-  top: 141px;
-  left: 60px;
-  transform: rotate(-60deg) ;
+  top: 112px;
+  left: 20px;
+  transform: rotate(-61deg) ;
 }
 
 .rig-slots .rig-slot-2 .slot-item {
-  transform: rotate(60deg) scale(0.6);
+  transform: rotate(61deg) scale(0.6);
 }
 
 .rig-slots .rig-slot-3 {
-  top: 173px;
-  left: 46px;
-  transform: rotate(-73deg) ;
-}
+  top: 153px;
+  left: 2px;
+  transform: rotate(-72deg) ;
+} 
 
 .rig-slots .rig-slot-3 .slot-item {
-  transform: rotate(73deg) scale(0.6);
+  transform: rotate(72deg) scale(0.6);
 }
 
 .sub-system-slots {
@@ -419,54 +421,54 @@ body {
   position: absolute;
 }
 
-.sub-system-slots .sub-system-slot-1 {
-  top: 221px;
-  left: 39px;
-  transform: rotate(-87deg) ;
+.sub-system-slots .sub-system-slot-5 {
+  top: 197px;
+  left: -8px;
+  transform: rotate(-83deg) ;
 }
 
-.sub-system-slots .sub-system-slot-1 .slot-item {
-  transform: rotate(87deg) scale(0.6);
+.sub-system-slots .sub-system-slot-5 .slot-item {
+  transform: rotate(83deg) scale(0.6);
 }
 
-.sub-system-slots .sub-system-slot-2 {
-  top: 255px;
-  left: 40px;
-  transform: rotate(-97deg) ;
+.sub-system-slots .sub-system-slot-4 {
+  top: 242px;
+  left: -9px;
+  transform: rotate(-94deg) ;
 }
 
-.sub-system-slots .sub-system-slot-2 .slot-item {
-  transform: rotate(97deg) scale(0.6);
+.sub-system-slots .sub-system-slot-4 .slot-item {
+  transform: rotate(94deg) scale(0.6);
 }
 
 .sub-system-slots .sub-system-slot-3 {
   top: 287px;
-  left: 47px;
-  transform: rotate(-109deg) ;
+  left: 0px;
+  transform: rotate(-105deg) ;
 }
 
 .sub-system-slots .sub-system-slot-3 .slot-item {
-  transform: rotate(109deg) scale(0.6);
+  transform: rotate(105deg) scale(0.6);
 }
 
-.sub-system-slots .sub-system-slot-4 {
-  top: 317px;
-  left: 60px;
-  transform: rotate(-118deg) ;
+.sub-system-slots .sub-system-slot-2 {
+  top: 330px;
+  left: 16px;
+  transform: rotate(-116deg) ;
 }
 
-.sub-system-slots .sub-system-slot-4 .slot-item {
-  transform: rotate(118deg) scale(0.6);
+.sub-system-slots .sub-system-slot-2 .slot-item {
+  transform: rotate(116deg) scale(0.6);
 }
 
-.sub-system-slots .sub-system-slot-5 {
-  top: 346px;
-  left: 78px;
-  transform: rotate(-128deg) ;
+.sub-system-slots .sub-system-slot-1 {
+  top: 368px;
+  left: 40px;
+  transform: rotate(-127deg) ;
 }
 
-.sub-system-slots .sub-system-slot-5 .slot-item {
-  transform: rotate(128deg) scale(0.6);
+.sub-system-slots .sub-system-slot-1 .slot-item {
+  transform: rotate(127deg) scale(0.6);
 }
 
 .slot-item {
